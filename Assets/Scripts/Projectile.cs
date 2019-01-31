@@ -17,5 +17,11 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
+        if (transform.position.z > 10)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
